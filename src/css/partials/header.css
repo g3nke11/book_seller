@@ -6,6 +6,10 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
+#logo-img {
+    max-width: 5em;
+}
 nav ul {
     list-style: none;
     margin: 0;
