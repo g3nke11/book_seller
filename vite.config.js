@@ -11,7 +11,8 @@ export default defineConfig({
     outDir: "../dist",
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "src/index.html")
+        main: resolve(__dirname, "src/index.html"),
+        about_us: resolve(__dirname, "src/about-us.html")
       }
     }
   }
