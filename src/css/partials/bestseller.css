@@ -1,0 +1,25 @@
+img{
+    width: 200px;
+    padding-top: 25px;
+    padding-left: 20px;
+}
+
+p{
+    padding-left: 20px;
+}
+
+h2{
+    margin-left: 20px;
+}
+
+h1{
+    text-align: center;
+}
+
+button{
+    margin-left: 20px;
+}
+
+.sort{
+    text-align: center;
+}
