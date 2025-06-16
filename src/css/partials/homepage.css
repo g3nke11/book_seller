@@ -41,7 +41,7 @@
 /* Genre sections */
 .genre-section {
     margin-bottom: 40px;
-    text-align: left; /* Align genre titles to the left */
+    text-align: center; /* Align genre titles to the left */
 }
 
 .genre-section h2 {
