@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "The Midnight Library",
             "author": "Matt Haig",
             "genre": "Fiction",
-            "cover": "images/book covers/midnight-library.jpg",
+            "cover": "images/book_covers/midnight-library.jpg",
             "tags": ["contemporary", "fantasy", "life", "philosophical"]
         },
         {
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Educated",
             "author": "Tara Westover",
             "genre": "Non-Fiction",
-            "cover": "images/book covers/educated.jpg",
+            "cover": "images/book_covers/educated.jpg",
             "tags": ["memoir", "biography", "education", "inspirational"]
         },
         {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "The Hate U Give",
             "author": "Angie Thomas",
             "genre": "Young Adult",
-            "cover": "images/book covers/the-hate-u-give.jpg",
+            "cover": "images/book_covers/the-hate-u-give.jpg",
             "tags": ["social issues", "contemporary", "racism", "young adult"]
         },
         {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Project Hail Mary",
             "author": "Andy Weir",
             "genre": "Fiction",
-            "cover": "images/book covers/project-hail-mary.jpg",
+            "cover": "images/book_covers/project-hail-mary.jpg",
             "tags": ["sci-fi", "space", "adventure", "humor"]
         },
         {
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Sapiens: A Brief History of Humankind",
             "author": "Yuval Noah Harari",
             "genre": "Non-Fiction",
-            "cover": "images/book covers/sapiens.jpg",
+            "cover": "images/book_covers/sapiens.jpg",
             "tags": ["history", "science", "philosophy", "evolution"]
         },
         {
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "One of Us Is Lying",
             "author": "Karen M. McManus",
             "genre": "Young Adult",
-            "cover": "images/book covers/one-of-us-is-lying.jpg",
+            "cover": "images/book_covers/one-of-us-is-lying.jpg",
             "tags": ["mystery", "thriller", "high school"]
         },
         {
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Where the Crawdads Sing",
             "author": "Delia Owens",
             "genre": "Fiction",
-            "cover": "images/book covers/where-the-crawdads-sing.jpg",
+            "cover": "images/book_covers/where-the-crawdads-sing.jpg",
             "tags": ["mystery", "nature", "southern fiction"]
         },
         {
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Atomic Habits",
             "author": "James Clear",
             "genre": "Non-Fiction",
-            "cover": "images/book covers/atomic-habits.jpg",
+            "cover": "images/book_covers/atomic-habits.jpg",
             "tags": ["self-help", "productivity", "habits"]
         },
         {
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Crescent City: House of Earth and Blood",
             "author": "Sarah J. Maas",
             "genre": "Fiction",
-            "cover": "images/book covers/crescent-city.jpg",
+            "cover": "images/book_covers/crescent-city.jpg",
             "tags": ["fantasy", "romance", "urban fantasy"]
         },
         {
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Becoming",
             "author": "Michelle Obama",
             "genre": "Non-Fiction",
-            "cover": "images/book covers/becoming.jpg",
+            "cover": "images/book_covers/becoming.jpg",
             "tags": ["memoir", "politics", "biography"]
         },
         {
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "The Hunger Games",
             "author": "Suzanne Collins",
             "genre": "Young Adult",
-            "cover": "images/book covers/hunger-games.jpg",
+            "cover": "images/book_covers/hunger-games.jpg",
             "tags": ["dystopian", "adventure", "sci-fi"]
         },
         {
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Circe",
             "author": "Madeline Miller",
             "genre": "Fiction",
-            "cover": "images/book covers/circe.jpg",
+            "cover": "images/book_covers/circe.jpg",
             "tags": ["mythology", "historical fiction", "fantasy"]
         },
         {
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Factfulness",
             "author": "Hans Rosling",
             "genre": "Non-Fiction",
-            "cover": "images/book covers/factfulness.jpg",
+            "cover": "images/book_covers/factfulness.jpg",
             "tags": ["data", "global issues", "statistics"]
         },
         {
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "A Good Girl's Guide to Murder",
             "author": "Holly Jackson",
             "genre": "Young Adult",
-            "cover": "images/book covers/a-good-girls-guide-to-murder.jpg",
+            "cover": "images/book_covers/a-good-girls-guide-to-murder.jpg",
             "tags": ["mystery", "thriller", "detective"]
         },
         {
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "The Vanishing Half",
             "author": "Brit Bennett",
             "genre": "Fiction",
-            "cover": "images/book covers/the-vanishing-half.jpg",
+            "cover": "images/book_covers/the-vanishing-half.jpg",
             "tags": ["historical fiction", "contemporary", "family saga"]
         },
         {
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "The Body Keeps the Score",
             "author": "Bessel van der Kolk",
             "genre": "Non-Fiction",
-            "cover": "images/book covers/the-body-keeps-the-score.jpg",
+            "cover": "images/book_covers/the-body-keeps-the-score.jpg",
             "tags": ["psychology", "trauma", "self-help"]
         },
         {
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "To Kill a Mockingbird",
             "author": "Harper Lee",
             "genre": "Fiction",
-            "cover": "images/book covers/to-kill-a-mockingbird.jpg",
+            "cover": "images/book_covers/to-kill-a-mockingbird.jpg",
             "tags": ["classic", "southern gothic", "social commentary"]
         },
         {
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "The Diary of a Young Girl",
             "author": "Anne Frank",
             "genre": "Non-Fiction",
-            "cover": "images/book covers/the-diary-of-a-young-girl.jpg",
+            "cover": "images/book_covers/the-diary-of-a-young-girl.jpg",
             "tags": ["memoir", "history", "biography"]
         },
         {
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Divergent",
             "author": "Veronica Roth",
             "genre": "Young Adult",
-            "cover": "images/book covers/divergent.jpg",
+            "cover": "images/book_covers/divergent.jpg",
             "tags": ["dystopian", "sci-fi", "adventure"]
         },
         {
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "The Martian",
             "author": "Andy Weir",
             "genre": "Fiction",
-            "cover": "images/book covers/the-martian.jpg",
+            "cover": "images/book_covers/the-martian.jpg",
             "tags": ["sci-fi", "adventure", "survival"]
         },
         {
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "Thinking, Fast and Slow",
             "author": "Daniel Kahneman",
             "genre": "Non-Fiction",
-            "cover": "images/book covers/thinking-fast-and-slow.jpg",
+            "cover": "images/book_covers/thinking-fast-and-slow.jpg",
             "tags": ["psychology", "economics", "decision-making"]
         },
         {
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "title": "The Fault in Our Stars",
             "author": "John Green",
             "genre": "Young Adult",
-            "cover": "images/book covers/the-fault-in-our-stars.jpg",
+            "cover": "images/book_covers/the-fault-in-our-stars.jpg",
             "tags": ["romance", "contemporary", "illness"]
         }
     ];
