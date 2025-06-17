@@ -10,9 +10,31 @@
   gap: 1rem;
 }
 
-.book-item img {
-  width: 80px;
+.book-cover {
+  width: 180px;
   height: auto;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 0.5px solid black;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  object-fit: scontain;
+  transition: transform 0.3s ease;
+}
+
+.book-cover:hover{
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba (0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.book-card {
+  display: flex;
+  align-items: flex-start;
+  background-color: #fff;
+  border: 1px solid black;
+  box-shadow: 0 5px 6px rgba(0,0,0,0.1);
+  padding: 12px;
+  margin: 20px auto;
+  gap: 20px;
+  overflow: hidden;
+  position: relative;
 }

@@ -43,20 +43,22 @@ function displayBooks(data) {
   const list = document.getElementById("book-list");
   list.innerHTML = "";
   data.forEach(book => {
-    const div = document.createElement("div");
+    const card = document.createElement("div");
+    card.classList.add("book-card")
 
-    div.innerHTML = `
-      <img src="${book.image}" alt="${book.title}">
+    card.innerHTML = `
+      <img src="${book.image}" class="book-cover" alt="${book.title}">
+      <div class="book-info">
       <h2>${book.title}</h2>
       <p><strong>Author:</strong> ${book.author}</p>
       <p><strong> Genre:</strong> ${book.genre}</p>
       <p>${book.description}</p>
       <p><strong>Price:</strong> $${book.price.toFixed(2)}</p>
       <button onclick="addToCart(${book.id})">Add to Cart</button>
-      <hr>
+      </div>
     `;
 
-    list.appendChild(div);
+    list.appendChild(card);
   });
 }
 
