@@ -1,0 +1,86 @@
+/* Hero section banner */
+.hero {
+    background-image: url('../images/bookshelf-banner.jpg'); /* Adjust path as needed */
+    background-size: cover;
+    background-position: center;
+    color: var(--bs-white); /* Adjust text color for readability on your image */
+    padding: 80px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow for better readability */
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero button {
+    background-color: var(--bs-brown);
+    color: var(--bs-white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: var(--bs-cape-honey);
+    color: var(--bs-brown);
+}
+
+/* Genre sections */
+.genre-section {
+    margin-bottom: 40px;
+    text-align: center; /* Align genre titles to the left */
+}
+
+.genre-section h2 {
+    color: var(--bs-brown); /* Your brand color for headings */
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--bs-brown); /* Underline for separation */
+    padding-bottom: 5px;
+    display: inline-block; /* Makes the border only as wide as the text */
+}
+
+.book-covers-container {
+    display: flex; /* Arranges book covers next to each other */
+    justify-content: center; /* Centers the book covers */
+    gap: 20px; /* Space between book covers */
+    flex-wrap: wrap; /* Allows covers to wrap to the next line on smaller screens */
+}
+
+.book-cover-item {
+    text-align: center;
+    width: 150px; /* Fixed width for each book cover container */
+    flex-shrink: 0; /* Prevents items from shrinking */
+}
+
+.book-cover-item img {
+    width: 100%; /* Make image fill its container */
+    height: 220px; /* Fixed height for consistent display */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.book-cover-item img:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+}
+
+.book-cover-item p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: var(--bs-grey-4);
+    font-weight: bold;
+}

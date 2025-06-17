@@ -3,4 +3,5 @@
 @import 'partials/header.css';
 @import 'partials/variables.css';
 @import 'partials/book-img.css';
-@import 'partials/bestseller.css'
+@import 'partials/bestseller.css';
+@import 'partials/homepage.css';

@@ -10,3 +10,27 @@ body {
     margin: 0 auto;
     text-align: center;
 }
+
+.about-content {
+  /* Soft border: very light gray, 1px solid */
+  border: 1px solid #e0e0e0; /* A very light gray, almost off-white */
+
+  /* Rounded corners for a softer look */
+  border-radius: 0.75rem; /* Adjust as needed, 0.75rem is 12px */
+
+  /* Add some internal space so content isn't right against the border */
+  padding: 1.5rem; /* Adjust as needed, 1.5rem is 24px */
+
+  /* Add space between sections */
+  margin-bottom: 1.5rem; /* Same as padding for consistency, adjust as needed */
+
+  /* Optional: A very subtle box shadow for a 'lifted' and softer feel */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Very light shadow */
+
+  /* Optional: A slightly off-white background can also enhance separation */
+  background-color: #ffffff; /* Or a very subtle off-white like #fdfdff */
+}
+
+ul {
+  list-style-type: none;
+}
