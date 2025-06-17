@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', homebooks)
     async function homebooks() {
     // Placeholder for your book data (books.json)
     // In a real scenario, you would fetch this from a JSON file using `fetch('data/books.json')`
-    const allBooks = await fetch(books.json);
+    const allBooks = await fetch("books.json");
 
     const genres = ["Fiction", "Non-Fiction", "Young Adult"];
 
