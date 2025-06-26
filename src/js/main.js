@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', homebooks)
+// document.addEventListener('DOMContentLoaded', homebooks)
 async function homebooks() {
     // Placeholder for your book data (books.json)
     // In a real scenario, you would fetch this from a JSON file using `fetch('data/books.json')`
-    const response = await fetch("./books.json");
+    const response = await fetch("src\public\books.json");
     const allBooks = response.json();
     const genres = ["Fiction", "Non-Fiction", "Young Adult"];
     genres.forEach(genre => {
@@ -35,3 +35,5 @@ function displayBooks(books, genre) {
         container.appendChild(bookItem);
     });
 }
+
+homebooks()
