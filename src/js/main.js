@@ -3,7 +3,7 @@ async function homebooks() {
     // Placeholder for your book data (books.json)
     // In a real scenario, you would fetch this from a JSON file using `fetch('data/books.json')`
     const response = await fetch("books.json");
-    const allBooks = response.json();
+    const allBooks = await response.json();
     const genres = ["Fiction", "Non-Fiction", "Young Adult"];
     genres.forEach(genre => {
         const booksInGenre = allBooks.filter(book => book.genre === genre);
