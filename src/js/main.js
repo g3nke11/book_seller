@@ -104,5 +104,57 @@ function displayBooks(books, genre) {
     });
 }
 
-// Call the homebooks function to start loading and displaying books when the script runs.
-homebooks();
+/**
+ * Handles the search functionality.
+ * Retrieves the search query from the input field and redirects to a search results page.
+ * The search results page (e.g., base.html) will then filter the books based on this query.
+ */
+function handleSearch() {
+    // Get a reference to the search input element.
+    // Assuming your search input has the class 'search-bar' and is an <input> tag.
+    const searchInput = document.querySelector('.search-bar input[type="text"]');
+
+    // If the search input element is not found, log an error and exit.
+    if (!searchInput) {
+        console.error("Search input element not found.");
+        return;
+    }
+
+    // Get the trimmed value from the search input.
+    const query = searchInput.value.trim();
+
+    // If the query is not empty, construct the URL and navigate.
+    if (query) {
+        // Encode the query to handle special characters in the URL.
+        const encodedQuery = encodeURIComponent(query);
+        // Redirect to 'base.html' (or your dedicated search results page)
+        // with the search query as a parameter.
+        window.location.href = `base.html?query=${encodedQuery}`;
+    } else {
+        // Optionally, provide feedback to the user if the search bar is empty.
+        console.log("Search bar is empty. Please enter a query.");
+        // You could also display a temporary message on the UI.
+    }
+}
+
+// Add event listeners for the search functionality after the DOM is loaded.
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.querySelector('.search-bar input[type="text"]');
+    if (searchInput) {
+        // Listen for the 'Enter' key press in the search input field.
+        searchInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                handleSearch();
+            }
+        });
+        // If you have a dedicated search button, you would add an event listener to it here.
+        // Example: const searchButton = document.querySelector('.search-bar button');
+        // if (searchButton) { searchButton.addEventListener('click', handleSearch); }
+    }
+
+    // Initialize the homebooks function to display books on page load.
+    homebooks();
+});
+
+// Note: The homebooks() call previously at the end of the script is now
+// moved inside the DOMContentLoaded listener to ensure all elements are ready.
