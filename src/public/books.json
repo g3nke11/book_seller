@@ -1,0 +1,502 @@
+[
+  {
+    "id": "1",
+    "title": "The Midnight Library",
+    "author": "Matt Haig",
+    "genre": "Fiction",
+    "price": 15.99,
+    "cover": "images/book_covers/midnight-library.jpg",
+    "description": "Between life and death, Nora Seed finds a library where she can try out different lives she might have lived, exploring paths she didn't take.",
+    "tags": [
+      "contemporary",
+      "fantasy",
+      "life",
+      "philosophical"
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Educated",
+    "author": "Tara Westover",
+    "genre": "Non-Fiction",
+    "price": 14.50,
+    "cover": "images/book_covers/educated.jpg",
+    "description": "A memoir about a young girl who, kept out of school, leaves her survivalist family in the mountains of Idaho to pursue an education.",
+    "tags": [
+      "memoir",
+      "biography",
+      "education",
+      "inspirational"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "The Hate U Give",
+    "author": "Angie Thomas",
+    "genre": "Young Adult",
+    "price": 10.99,
+    "cover": "images/book_covers/the-hate-u-give.jpg",
+    "description": "After witnessing the fatal shooting of her childhood best friend by a police officer, a 16-year-old girl navigates the complexities of her two worlds.",
+    "tags": [
+      "social issues",
+      "contemporary",
+      "racism",
+      "young adult"
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Project Hail Mary",
+    "author": "Andy Weir",
+    "genre": "Fiction",
+    "price": 16.99,
+    "cover": "images/book_covers/project-hail-mary.jpg",
+    "description": "An amnesiac astronaut wakes up on a spaceship with a mission to save humanity, but he can't remember who he is or how he got there.",
+    "tags": [
+      "sci-fi",
+      "space",
+      "adventure",
+      "humor"
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Sapiens: A Brief History of Humankind",
+    "author": "Yuval Noah Harari",
+    "genre": "Non-Fiction",
+    "price": 18.00,
+    "cover": "images/book_covers/sapiens.jpg",
+    "description": "A sweeping history of humankind from the Stone Age to the 21st century, exploring how we came to believe in gods, nations, and human rights.",
+    "tags": [
+      "history",
+      "science",
+      "philosophy",
+      "evolution"
+    ]
+  },
+  {
+    "id": "6",
+    "title": "One of Us Is Lying",
+    "author": "Karen M. McManus",
+    "genre": "Young Adult",
+    "price": 11.50,
+    "cover": "images/book_covers/one-of-us-is-lying.jpg",
+    "description": "Five students walk into detention, but only four walk out alive. Everyone is a suspect, and everyone has something to hide.",
+    "tags": [
+      "mystery",
+      "thriller",
+      "high school"
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Where the Crawdads Sing",
+    "author": "Delia Owens",
+    "genre": "Fiction",
+    "price": 13.75,
+    "cover": "images/book_covers/where-the-crawdads-sing.jpg",
+    "description": "A story of a young girl who raises herself in the marshes of North Carolina, becoming entangled in a murder investigation.",
+    "tags": [
+      "mystery",
+      "nature",
+      "southern fiction"
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "genre": "Non-Fiction",
+    "price": 17.99,
+    "cover": "images/book_covers/atomic-habits.jpg",
+    "description": "An easy and proven way to build good habits and break bad ones, offering practical strategies for lasting change.",
+    "tags": [
+      "self-help",
+      "productivity",
+      "habits"
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Crescent City: House of Earth and Blood",
+    "author": "Sarah J. Maas",
+    "genre": "Fiction",
+    "price": 19.50,
+    "cover": "images/book_covers/crescent-city.jpg",
+    "description": "In a world brimming with magic and danger, a half-Fae, half-human woman seeks revenge and uncovers a conspiracy.",
+    "tags": [
+      "fantasy",
+      "romance",
+      "urban fantasy"
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Becoming",
+    "author": "Michelle Obama",
+    "genre": "Non-Fiction",
+    "price": 16.00,
+    "cover": "images/book_covers/becoming.jpg",
+    "description": "A deeply personal memoir from the former First Lady of the United States, sharing her journey from childhood to the White House.",
+    "tags": [
+      "memoir",
+      "politics",
+      "biography"
+    ]
+  },
+  {
+    "id": "11",
+    "title": "The Hunger Games",
+    "author": "Suzanne Collins",
+    "genre": "Young Adult",
+    "price": 9.99,
+    "cover": "images/book_covers/hunger-games.jpg",
+    "description": "In a dystopian future, teenagers are forced to fight to the death in a televised event, and one girl's defiance sparks a rebellion.",
+    "tags": [
+      "dystopian",
+      "adventure",
+      "sci-fi"
+    ]
+  },
+  {
+    "id": "12",
+    "title": "Circe",
+    "author": "Madeline Miller",
+    "genre": "Fiction",
+    "price": 14.25,
+    "cover": "images/book_covers/circe.jpg",
+    "description": "A retelling of the Greek myth of Circe, the goddess of magic, as she navigates her immortal life and encounters legendary figures.",
+    "tags": [
+      "mythology",
+      "historical fiction",
+      "fantasy"
+    ]
+  },
+  {
+    "id": "13",
+    "title": "Factfulness",
+    "author": "Hans Rosling",
+    "genre": "Non-Fiction",
+    "price": 16.50,
+    "cover": "images/book_covers/factfulness.jpg",
+    "description": "A book that challenges our common misconceptions about the world and offers a fact-based worldview.",
+    "tags": [
+      "data",
+      "global issues",
+      "statistics"
+    ]
+  },
+  {
+    "id": "14",
+    "title": "A Good Girl's Guide to Murder",
+    "author": "Holly Jackson",
+    "genre": "Young Adult",
+    "price": 10.50,
+    "cover": "images/book_covers/a-good-girls-guide-to-murder.jpg",
+    "description": "A high school senior investigates a closed murder case for her capstone project, uncovering dark secrets in her small town.",
+    "tags": [
+      "mystery",
+      "thriller",
+      "detective"
+    ]
+  },
+  {
+    "id": "15",
+    "title": "The Vanishing Half",
+    "author": "Brit Bennett",
+    "genre": "Fiction",
+    "price": 14.00,
+    "cover": "images/book_covers/the-vanishing-half.jpg",
+    "description": "Twin sisters choose to live in two very different worlds, one passing as white, the other living with her Black daughter, exploring themes of identity and race.",
+    "tags": [
+      "historical fiction",
+      "contemporary",
+      "family saga"
+    ]
+  },
+  {
+    "id": "16",
+    "title": "The Body Keeps the Score",
+    "author": "Bessel van der Kolk",
+    "genre": "Non-Fiction",
+    "price": 18.99,
+    "cover": "images/book_covers/the-body-keeps-the-score.jpg",
+    "description": "A groundbreaking work on the effects of trauma and innovative treatments for recovery, drawing on neuroscience and clinical practice.",
+    "tags": [
+      "psychology",
+      "trauma",
+      "self-help"
+    ]
+  },
+  {
+    "id": "17",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": "Fiction",
+    "price": 11.00,
+    "cover": "images/book_covers/to-kill-a-mockingbird.jpg",
+    "description": "A classic American novel set in the Deep South during the 1930s, addressing themes of racial injustice and moral growth.",
+    "tags": [
+      "classic",
+      "southern gothic",
+      "social commentary"
+    ]
+  },
+  {
+    "id": "18",
+    "title": "The Diary of a Young Girl",
+    "author": "Anne Frank",
+    "genre": "Non-Fiction",
+    "price": 9.50,
+    "cover": "images/book_covers/the-diary-of-a-young-girl.jpg",
+    "description": "The poignant and powerful diary of a young Jewish girl hiding from the Nazis during World War II.",
+    "tags": [
+      "memoir",
+      "history",
+      "biography"
+    ]
+  },
+  {
+    "id": "19",
+    "title": "Divergent",
+    "author": "Veronica Roth",
+    "genre": "Young Adult",
+    "price": 10.99,
+    "cover": "images/book_covers/divergent.jpg",
+    "description": "In a futuristic Chicago, society is divided into five factions. A young girl discovers she is Divergent and doesn't fit into any one group.",
+    "tags": [
+      "dystopian",
+      "sci-fi",
+      "adventure"
+    ]
+  },
+  {
+    "id": "20",
+    "title": "The Martian",
+    "author": "Andy Weir",
+    "genre": "Fiction",
+    "price": 13.99,
+    "cover": "images/book_covers/the-martian.jpg",
+    "description": "An astronaut is left behind on Mars and must use his ingenuity to survive and signal Earth.",
+    "tags": [
+      "sci-fi",
+      "adventure",
+      "survival"
+    ]
+  },
+  {
+    "id": "21",
+    "title": "Thinking, Fast and Slow",
+    "author": "Daniel Kahneman",
+    "genre": "Non-Fiction",
+    "price": 19.99,
+    "cover": "images/book_covers/thinking-fast-and-slow.jpg",
+    "description": "Nobel laureate Daniel Kahneman explores the two systems that drive the way we think and make decisions.",
+    "tags": [
+      "psychology",
+      "economics",
+      "decision-making"
+    ]
+  },
+  {
+    "id": "22",
+    "title": "The Fault in Our Stars",
+    "author": "John Green",
+    "genre": "Young Adult",
+    "price": 10.00,
+    "cover": "images/book_covers/the-fault-in-our-stars.jpg",
+    "description": "Two teenage cancer patients fall in love, navigating life, illness, and the complexities of their relationship.",
+    "tags": [
+      "romance",
+      "contemporary",
+      "illness"
+    ]
+  },
+  {
+    "id": "23",
+    "title": "Onyx Storm",
+    "author": "Rebecca Yarros",
+    "genre": "Fiction",
+    "price": 14.99,
+    "cover": "https://placehold.co/150x200/cccccc/333333?text=Onyx+Storm",
+    "description": "The third installment in The Empyrean series, following Violet Sorrengail as she faces escalating challenges in a world of dragon riders and political intrigue.",
+    "tags": [
+      "fantasy",
+      "dragon riders",
+      "political intrigue",
+      "bestseller"
+    ]
+  },
+  {
+    "id": "24",
+    "title": "Broken Country",
+    "author": "Clare Leslie Hall",
+    "genre": "Fiction",
+    "price": 25.99,
+    "cover": "https://placehold.co/150x200/cccccc/333333?text=Broken+Country",
+    "description": "A narrative exploring themes of love, loss, and resilience in a rural setting, delving into the lives of its complex characters.",
+    "tags": [
+      "contemporary",
+      "rural fiction",
+      "emotional",
+      "bestseller"
+    ]
+  },
+  {
+    "id": "25",
+    "title": "Careless People",
+    "author": "Sarah Wynn-Williams",
+    "genre": "Non-Fiction",
+    "price": 27.99,
+    "cover": "https://placehold.co/150x200/cccccc/333333?text=Careless+People",
+    "description": "A memoir detailing the author's experiences working at Facebook, offering insights into the tech industry's culture.",
+    "tags": [
+      "memoir",
+      "tech industry",
+      "corporate culture",
+      "bestseller"
+    ]
+  },
+  {
+    "id": "26",
+    "title": "Resolute",
+    "author": "Benjamin Hall",
+    "genre": "Non-Fiction",
+    "price": 28.00,
+    "cover": "https://placehold.co/150x200/cccccc/333333?text=Resolute",
+    "description": "A personal account of the author's recovery after being injured while reporting in Ukraine.",
+    "tags": [
+      "memoir",
+      "war reporting",
+      "resilience",
+      "bestseller"
+    ]
+  },
+  {
+    "id": "27",
+    "title": "The Silent Patient",
+    "author": "Alex Michaelides",
+    "genre": "Fiction",
+    "price": 12.50,
+    "cover": "https://placehold.co/150x200/cccccc/333333?text=Silent+Patient",
+    "description": "A shocking psychological thriller about a famous painter who shoots her husband and a psychotherapist determined to unravel what happened.",
+    "tags": [
+      "thriller",
+      "psychological",
+      "mystery"
+    ]
+  },
+  {
+    "id": "28",
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "genre": "Fiction",
+    "price": 10.00,
+    "cover": "https://placehold.co/150x200/cccccc/333333?text=The+Alchemist",
+    "description": "A philosophical novel about a young shepherd who journeys to the Egyptian desert in search of a treasure, learning about himself along the way.",
+    "tags": [
+      "philosophical",
+      "adventure",
+      "spiritual"
+    ]
+  },
+  {
+    "id": "29",
+    "title": "Educated: A Memoir",
+    "author": "Tara Westover",
+    "genre": "Non-Fiction",
+    "price": 14.50,
+    "cover": "https://placehold.co/150x200/cccccc/333333?text=Educated+Memoir",
+    "description": "A powerful memoir of self-invention, chronicling a young woman's journey from a fundamentalist upbringing to Cambridge University.",
+    "tags": [
+      "memoir",
+      "education",
+      "biography"
+    ]
+  },
+  {
+    "id": "30",
+    "title": "The Nightingale",
+    "author": "Kristin Hannah",
+    "genre": "Fiction",
+    "price": 13.00,
+    "cover": "https://placehold.co/150x200/cccccc/333333?text=The+Nightingale",
+    "description": "A powerful story of two sisters struggling to survive and resist during the German occupation of France in World War II.",
+    "tags": [
+      "historical fiction",
+      "war",
+      "family"
+    ]
+  },
+  {
+    "id": "31",
+    "title": "The Giver",
+    "author": "Lois Lowry",
+    "genre": "Young Adult",
+    "price": 8.99,
+    "cover": "https://placehold.co/150x200/cccccc/333333?text=The+Giver",
+    "description": "In a seemingly utopian society, a young boy is chosen to be the receiver of memories, uncovering the dark truths about his community.",
+    "tags": [
+      "dystopian",
+      "young adult",
+      "classic"
+    ]
+  },
+  {
+    "id": "32",
+    "title": "Where the Forest Meets the Stars",
+    "author": "Glendy Vanderah",
+    "genre": "Fiction",
+    "price": 11.99,
+    "cover": "https://placehold.co/150x200/cccccc/333333?text=Forest+Meets+Stars",
+    "description": "A grieving astronomer encounters a mysterious child who claims to be an alien, leading to a journey of healing and discovery.",
+    "tags": [
+      "contemporary",
+      "magical realism",
+      "healing"
+    ]
+  },
+  {
+    "id": "33",
+    "title": "The Subtle Art of Not Giving a F*ck",
+    "author": "Mark Manson",
+    "genre": "Non-Fiction",
+    "price": 15.00,
+    "cover": "https://placehold.co/150x200/cccccc/333333?text=Subtle+Art",
+    "description": "A counterintuitive approach to living a good life, challenging conventional self-help advice.",
+    "tags": [
+      "self-help",
+      "philosophy",
+      "humor"
+    ]
+  },
+  {
+    "id": "34",
+    "title": "Red, White & Royal Blue",
+    "author": "Casey McQuiston",
+    "genre": "Young Adult",
+    "price": 12.99,
+    "cover": "https://placehold.co/150x200/cccccc/333333?text=Red+White+Royal+Blue",
+    "description": "The First Son of the United States falls in love with a British prince, navigating their secret romance amidst public scrutiny.",
+    "tags": [
+      "romance",
+      "lgbtq+",
+      "contemporary",
+      "young adult"
+    ]
+  },
+  {
+    "id": "35",
+    "title": "The Testaments",
+    "author": "Margaret Atwood",
+    "genre": "Fiction",
+    "price": 16.99,
+    "cover": "https://placehold.co/150x200/cccccc/333333?text=The+Testaments",
+    "description": "A sequel to 'The Handmaid's Tale,' picking up fifteen years after Offred's final scene, with three female narrators.",
+    "tags": [
+      "dystopian",
+      "sequel",
+      "feminist"
+    ]
+  }
+]
