@@ -1,6 +1,22 @@
+import { handleSearch } from "./search.js"
+
 // This function will be the main entry point for the book details/search results page.
 async function initBookDetailsPage() {
     // Get a reference to the container where book details or search results will be displayed.
+    const searchInput = document.querySelector('.search-bar input[type="text"]');
+    if (searchInput) {
+        // Listen for the 'Enter' key press in the search input field.
+        searchInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                handleSearch();
+            }
+        });
+        // If you have a dedicated search button, you would add an event listener to it here.
+        // Example: const searchButton = document.querySelector('.search-bar button');
+        // if (searchButton) { searchButton.addEventListener('click', handleSearch); }
+    }
+
+
     const detailsContainer = document.getElementById('content');
 
     // If the container is not found, log an error and exit.

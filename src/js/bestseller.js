@@ -1,3 +1,5 @@
+import { handleSearch } from "./search.js"
+
 const books = [
   {
     id: 1,
@@ -90,6 +92,19 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("search").addEventListener("input", e => {
     filterBooks(e.target.value);
   });
+
+  const searchInput = document.querySelector('.search-bar input[type="text"]');
+    if (searchInput) {
+        // Listen for the 'Enter' key press in the search input field.
+        searchInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                handleSearch();
+            }
+        });
+        // If you have a dedicated search button, you would add an event listener to it here.
+        // Example: const searchButton = document.querySelector('.search-bar button');
+        // if (searchButton) { searchButton.addEventListener('click', handleSearch); }
+    }
 
   document.getElementById("sort-low").addEventListener("click", () => sortBooks("low"));
   document.getElementById("sort-high").addEventListener("click", () => sortBooks("high"));
