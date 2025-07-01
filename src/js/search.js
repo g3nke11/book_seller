@@ -1,4 +1,4 @@
-function handleSearch() {
+export function handleSearch() {
     // Get a reference to the search input element.
     // Assuming your search input has the class 'search-bar' and is an <input> tag.
     const searchInput = document.querySelector('.search-bar input[type="text"]');
