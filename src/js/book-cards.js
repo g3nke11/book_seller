@@ -1,11 +1,11 @@
 // This function will be the main entry point for the book details/search results page.
 async function initBookDetailsPage() {
     // Get a reference to the container where book details or search results will be displayed.
-    const detailsContainer = document.getElementById('book-details-container');
+    const detailsContainer = document.getElementById('content');
 
     // If the container is not found, log an error and exit.
     if (!detailsContainer) {
-        console.error("Book details container with ID 'book-details-container' not found.");
+        console.error("Book details container with ID 'content' not found.");
         return;
     }
 
