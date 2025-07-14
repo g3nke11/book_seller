@@ -498,5 +498,145 @@
       "sequel",
       "feminist"
     ]
+  },
+  {
+    "id": "36",
+    "title": "The mind illuminated",
+    "author": "Culadasa John Yates, Matthew Immergut PhD, Sean Runnette Jeremy Graves",
+    "genre": "Self-help",
+    "price": 18.75,
+    "cover": "https://m.media-amazon.com/images/I/71YA7m6c2YL._SY522_.jpg",
+    "description": "A revolutionary, science-based approach to meditation from a neuroscientist turned meditation master, The Mind Illuminated is an accessible, step-by-step toolkit for anyone looking to start—or improve—their daily meditation practice.",
+    "tags": [
+      "Self-help",
+      "Self-improvement"
+    ]
+  },
+  {
+    "id": "",
+    "title": "",
+    "author": "",
+    "genre": "",
+    "price": ,
+    "cover": "",
+    "description": "",
+    "tags": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": "",
+    "title": "",
+    "author": "",
+    "genre": "",
+    "price": ,
+    "cover": "",
+    "description": "",
+    "tags": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": "",
+    "title": "",
+    "author": "",
+    "genre": "",
+    "price": ,
+    "cover": "",
+    "description": "",
+    "tags": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": "",
+    "title": "",
+    "author": "",
+    "genre": "",
+    "price": ,
+    "cover": "",
+    "description": "",
+    "tags": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": "",
+    "title": "",
+    "author": "",
+    "genre": "",
+    "price": ,
+    "cover": "",
+    "description": "",
+    "tags": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": "",
+    "title": "",
+    "author": "",
+    "genre": "",
+    "price": ,
+    "cover": "",
+    "description": "",
+    "tags": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": "",
+    "title": "",
+    "author": "",
+    "genre": "",
+    "price": ,
+    "cover": "",
+    "description": "",
+    "tags": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": "",
+    "title": "",
+    "author": "",
+    "genre": "",
+    "price": ,
+    "cover": "",
+    "description": "",
+    "tags": [
+      "",
+      "",
+      ""
+    ]
   }
 ]
+/*
+  {
+    "id": "",
+    "title": "",
+    "author": "",
+    "genre": "",
+    "price": ,
+    "cover": "",
+    "description": "",
+    "tags": [
+      "",
+      "",
+      ""
+    ]
+  }, */

@@ -1,6 +1,6 @@
 import { handleSearch } from "./search.js"
 
-const books = [
+/*const books = [
   {
     id: 1,
     title: "Onyx Storm",
@@ -37,7 +37,51 @@ const books = [
     image: "https://m.media-amazon.com/images/I/71++dQPbYGL.jpg",
     description: " A personal account of the author's recovery after being injured while reporting in Ukraine."
   }
-];
+];*/
+
+
+
+const bookList = document.getElementById('book-list');
+const searchInput = document.getElementById('search');
+
+async function fetchBooks (query = 'bestseller') {
+  const url = `https://openLibrary.org/search.json?q=${encodeURIComponent(query)}&limit=10`;
+
+  try{
+    const response = await fetch(url);
+    const data = await response.json();
+  
+    displayBooks(data.docs);
+  } catch (error) {
+    console.error('Error fetching books:', error);
+    bookList.innerHTML = '<p>Failed to load books. Please try again later.</p>';
+  }
+}
+
+function displayBooks(books) {
+  bookList.innerHTML = books.map(book => {
+    const title = book.title || 'No Title';
+    const author = book.author_name ? book.author_name.join(', ') : 'Unknown Author';
+    const coverId = book.cover_id;
+    const coverUrl = coverId
+    ? `https://covers.openlibrary.org/b/id/${coverId}-M.jpg`
+    : 'https://via.placeholder.com/128x193?text=No+Cover';
+
+    return `
+    <div class="book">
+      <img src="${coverUrl}" alt="${title}">
+      <h3>${title}</h3>
+      <p>by ${author}</p>
+    </div>`;
+  }).join('');
+}
+
+searchInput.addEventListener('input', () =>{
+  const query = searchInput.value.trim();
+  fetchBooks(query || 'bestseller');
+});
+
+fetchBooks();
 
 let cart = [];
 
