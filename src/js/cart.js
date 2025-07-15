@@ -28,7 +28,7 @@ function displayBooks(data) {
 
 // Function to load books from localStorage
 function loadBooksFromLocalStorage() {
-  const booksJSON = localStorage.getItem("books"); // Assuming you store your books under the key "books"
+  const booksJSON = localStorage.getItem("bookShoppeCart"); // Assuming you store your books under the key "books"
   if (booksJSON) {
     try {
       const books = JSON.parse(booksJSON);
