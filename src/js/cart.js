@@ -42,6 +42,14 @@ function loadBooksFromLocalStorage() {
   }
 }
 
+function filterBooks(keyword) {
+  const filtered = books.filter(b =>
+    b.title.toLowerCase().includes(keyword.toLowerCase()) ||
+    b.author.toLowerCase().includes(keyword.toLowerCase())
+  );
+  displayBooks(filtered);
+}
+
 // Call this function when your page loads to display the books
 document.addEventListener("DOMContentLoaded", () => {
     loadBooksFromLocalStorage();
