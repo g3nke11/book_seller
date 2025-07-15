@@ -95,7 +95,7 @@ function displayBooks(data) {
     card.classList.add("book-card")
 
     card.innerHTML = `
-      <img src="${book.image}" class="book-cover" alt="${book.title}">
+      <img src="${book.cover}" class="book-cover" alt="${book.title}">
       <div class="book-info">
       <h2>${book.title}</h2>
       <p><strong>Author:</strong> ${book.author}</p>
