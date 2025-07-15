@@ -318,7 +318,7 @@
     "author": "Rebecca Yarros",
     "genre": "Fiction",
     "price": 14.99,
-    "cover": "https://placehold.co/150x200/cccccc/333333?text=Onyx+Storm",
+    "cover": "images/book_covers",
     "description": "The third installment in The Empyrean series, following Violet Sorrengail as she faces escalating challenges in a world of dragon riders and political intrigue.",
     "tags": [
       "fantasy",
@@ -333,7 +333,7 @@
     "author": "Clare Leslie Hall",
     "genre": "Fiction",
     "price": 25.99,
-    "cover": "https://placehold.co/150x200/cccccc/333333?text=Broken+Country",
+    "cover": "https://m.media-amazon.com/images/I/81565rjI6fL._SL1500_.jpg",
     "description": "A narrative exploring themes of love, loss, and resilience in a rural setting, delving into the lives of its complex characters.",
     "tags": [
       "contemporary",
@@ -348,7 +348,7 @@
     "author": "Sarah Wynn-Williams",
     "genre": "Non-Fiction",
     "price": 27.99,
-    "cover": "https://placehold.co/150x200/cccccc/333333?text=Careless+People",
+    "cover": "https://m.media-amazon.com/images/I/41rRvRJAfYL._SY445_SX342_.jpg",
     "description": "A memoir detailing the author's experiences working at Facebook, offering insights into the tech industry's culture.",
     "tags": [
       "memoir",
@@ -392,7 +392,7 @@
     "author": "Paulo Coelho",
     "genre": "Fiction",
     "price": 10.00,
-    "cover": "https://placehold.co/150x200/cccccc/333333?text=The+Alchemist",
+    "cover": "https://m.media-amazon.com/images/I/71+2-t7M35L._SL1500_.jpg",
     "description": "A philosophical novel about a young shepherd who journeys to the Egyptian desert in search of a treasure, learning about himself along the way.",
     "tags": [
       "philosophical",
@@ -406,7 +406,7 @@
     "author": "Tara Westover",
     "genre": "Non-Fiction",
     "price": 14.50,
-    "cover": "https://placehold.co/150x200/cccccc/333333?text=Educated+Memoir",
+    "cover": "https://m.media-amazon.com/images/I/71-4MkLN5jL._SL1500_.jpg",
     "description": "A powerful memoir of self-invention, chronicling a young woman's journey from a fundamentalist upbringing to Cambridge University.",
     "tags": [
       "memoir",
@@ -420,7 +420,7 @@
     "author": "Kristin Hannah",
     "genre": "Fiction",
     "price": 13.00,
-    "cover": "https://placehold.co/150x200/cccccc/333333?text=The+Nightingale",
+    "cover": "https://m.media-amazon.com/images/I/81OkWjcf4WL._SY522_.jpg",
     "description": "A powerful story of two sisters struggling to survive and resist during the German occupation of France in World War II.",
     "tags": [
       "historical fiction",
@@ -434,7 +434,7 @@
     "author": "Lois Lowry",
     "genre": "Young Adult",
     "price": 8.99,
-    "cover": "https://placehold.co/150x200/cccccc/333333?text=The+Giver",
+    "cover": "https://m.media-amazon.com/images/I/81Yq5WKWfSL._SL1500_.jpg",
     "description": "In a seemingly utopian society, a young boy is chosen to be the receiver of memories, uncovering the dark truths about his community.",
     "tags": [
       "dystopian",
@@ -448,7 +448,7 @@
     "author": "Glendy Vanderah",
     "genre": "Fiction",
     "price": 11.99,
-    "cover": "https://placehold.co/150x200/cccccc/333333?text=Forest+Meets+Stars",
+    "cover": "https://m.media-amazon.com/images/I/918hXn4Uy1L._SL1500_.jpg",
     "description": "A grieving astronomer encounters a mysterious child who claims to be an alien, leading to a journey of healing and discovery.",
     "tags": [
       "contemporary",
@@ -462,7 +462,7 @@
     "author": "Mark Manson",
     "genre": "Non-Fiction",
     "price": 15.00,
-    "cover": "https://placehold.co/150x200/cccccc/333333?text=Subtle+Art",
+    "cover": "https://m.media-amazon.com/images/I/71QKQ9mwV7L._SL1500_.jpg",
     "description": "A counterintuitive approach to living a good life, challenging conventional self-help advice.",
     "tags": [
       "self-help",
@@ -476,7 +476,7 @@
     "author": "Casey McQuiston",
     "genre": "Young Adult",
     "price": 12.99,
-    "cover": "https://placehold.co/150x200/cccccc/333333?text=Red+White+Royal+Blue",
+    "cover": "https://m.media-amazon.com/images/I/41hv25yqOCL._SY445_SX342_.jpg",
     "description": "The First Son of the United States falls in love with a British prince, navigating their secret romance amidst public scrutiny.",
     "tags": [
       "romance",
@@ -491,12 +491,152 @@
     "author": "Margaret Atwood",
     "genre": "Fiction",
     "price": 16.99,
-    "cover": "https://placehold.co/150x200/cccccc/333333?text=The+Testaments",
+    "cover": "https://m.media-amazon.com/images/I/61grm5n2FrL._SY522_.jpg",
     "description": "A sequel to 'The Handmaid's Tale,' picking up fifteen years after Offred's final scene, with three female narrators.",
     "tags": [
       "dystopian",
       "sequel",
       "feminist"
     ]
+  },
+  {
+    "id": "36",
+    "title": "The mind illuminated",
+    "author": "Culadasa John Yates, Matthew Immergut PhD, Sean Runnette Jeremy Graves",
+    "genre": "Non-Fiction",
+    "price": 18.75,
+    "cover": "https://m.media-amazon.com/images/I/71YA7m6c2YL._SY522_.jpg",
+    "description": "A revolutionary, science-based approach to meditation from a neuroscientist turned meditation master, The Mind Illuminated is an accessible, step-by-step toolkit for anyone looking to start—or improve—their daily meditation practice.",
+    "tags": [
+      "Self-help",
+      "Self-improvement"
+    ]
+  },
+  {
+    "id": "37",
+    "title": "Daphne's Questionable Bet",
+    "author": "Sara Jo Cluff",
+    "genre": "Young Adult",
+    "price": 14.99,
+    "cover": "https://m.media-amazon.com/images/I/712rvTwNonL._SY522_.jpg",
+    "description": "When Daphne moves to California, her new nemesis dares her to a challenge: who can land the charming, popular Bentley Anderson as a prom date? Confident and competitive, Daphne jumps at the bet. Both girls pull out all the stops—flirting, scheming, and sabotage included. Bentley seems to be falling for Daphne… but she finds herself drawn to someone else. A sweet, awkward guy obsessed with superheroes—just like her.",
+    "tags": [
+      "young adult",
+      "Teen",
+      "Romance"
+    ]
+  },
+  {
+    "id": "",
+    "title": "",
+    "author": "",
+    "genre": "",
+    "price": ,
+    "cover": "",
+    "description": "",
+    "tags": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": "",
+    "title": "",
+    "author": "",
+    "genre": "",
+    "price": ,
+    "cover": "",
+    "description": "",
+    "tags": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": "",
+    "title": "",
+    "author": "",
+    "genre": "",
+    "price": ,
+    "cover": "",
+    "description": "",
+    "tags": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": "",
+    "title": "",
+    "author": "",
+    "genre": "",
+    "price": ,
+    "cover": "",
+    "description": "",
+    "tags": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": "",
+    "title": "",
+    "author": "",
+    "genre": "",
+    "price": ,
+    "cover": "",
+    "description": "",
+    "tags": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": "",
+    "title": "",
+    "author": "",
+    "genre": "",
+    "price": ,
+    "cover": "",
+    "description": "",
+    "tags": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": "",
+    "title": "",
+    "author": "",
+    "genre": "",
+    "price": ,
+    "cover": "",
+    "description": "",
+    "tags": [
+      "",
+      "",
+      ""
+    ]
   }
 ]
+/*
+  {
+    "id": "",
+    "title": "",
+    "author": "",
+    "genre": "",
+    "price": ,
+    "cover": "",
+    "description": "",
+    "tags": [
+      "",
+      "",
+      ""
+    ]
+  }, */
