@@ -45,36 +45,38 @@ const bookList = document.getElementById('book-list');
 const searchInput = document.getElementById('search');
 
 async function fetchBooks (query = 'bestseller') {
-  const url = `https://openLibrary.org/search.json?q=${encodeURIComponent(query)}&limit=10`;
+  // const url = `https://openLibrary.org/search.json?q=${encodeURIComponent(query)}&limit=10`;
+  const url = 'books.json';
 
   try{
     const response = await fetch(url);
     const data = await response.json();
   
-    displayBooks(data.docs);
+    displayBooks(data)
+    // displayBooks(data.docs);
   } catch (error) {
     console.error('Error fetching books:', error);
     bookList.innerHTML = '<p>Failed to load books. Please try again later.</p>';
   }
 }
 
-function displayBooks(books) {
-  bookList.innerHTML = books.map(book => {
-    const title = book.title || 'No Title';
-    const author = book.author_name ? book.author_name.join(', ') : 'Unknown Author';
-    const coverId = book.cover_id;
-    const coverUrl = coverId
-    ? `https://covers.openlibrary.org/b/id/${coverId}-M.jpg`
-    : 'https://via.placeholder.com/128x193?text=No+Cover';
+// function displayBooks(books) {
+//   bookList.innerHTML = books.map(book => {
+//     const title = book.title || 'No Title';
+//     const author = book.author_name ? book.author_name.join(', ') : 'Unknown Author';
+//     const coverId = book.cover_id;
+//     const coverUrl = coverId
+//     ? `https://covers.openlibrary.org/b/id/${coverId}-M.jpg`
+//     : 'https://via.placeholder.com/128x193?text=No+Cover';
 
-    return `
-    <div class="book">
-      <img src="${coverUrl}" alt="${title}">
-      <h3>${title}</h3>
-      <p>by ${author}</p>
-    </div>`;
-  }).join('');
-}
+//     return `
+//     <div class="book">
+//       <img src="${coverUrl}" alt="${title}">
+//       <h3>${title}</h3>
+//       <p>by ${author}</p>
+//     </div>`;
+//   }).join('');
+// }
 
 searchInput.addEventListener('input', () =>{
   const query = searchInput.value.trim();
@@ -93,7 +95,7 @@ function displayBooks(data) {
     card.classList.add("book-card")
 
     card.innerHTML = `
-      <img src="${book.image}" class="book-cover" alt="${book.title}">
+      <img src="${book.cover}" class="book-cover" alt="${book.title}">
       <div class="book-info">
       <h2>${book.title}</h2>
       <p><strong>Author:</strong> ${book.author}</p>
@@ -131,7 +133,7 @@ function sortBooks(order) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  displayBooks(books);
+  // displayBooks(books);
 
   document.getElementById("search").addEventListener("input", e => {
     filterBooks(e.target.value);
