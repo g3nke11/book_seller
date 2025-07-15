@@ -318,7 +318,7 @@
     "author": "Rebecca Yarros",
     "genre": "Fiction",
     "price": 14.99,
-    "cover": "images/book_covers",
+    "cover": "images/book_covers/Onyx-storm.jpg",
     "description": "The third installment in The Empyrean series, following Violet Sorrengail as she faces escalating challenges in a world of dragon riders and political intrigue.",
     "tags": [
       "fantasy",
@@ -525,118 +525,19 @@
       "Teen",
       "Romance"
     ]
-  },
-  {
-    "id": "",
-    "title": "",
-    "author": "",
-    "genre": "",
-    "price": ,
-    "cover": "",
-    "description": "",
-    "tags": [
-      "",
-      "",
-      ""
-    ]
-  },
-  {
-    "id": "",
-    "title": "",
-    "author": "",
-    "genre": "",
-    "price": ,
-    "cover": "",
-    "description": "",
-    "tags": [
-      "",
-      "",
-      ""
-    ]
-  },
-  {
-    "id": "",
-    "title": "",
-    "author": "",
-    "genre": "",
-    "price": ,
-    "cover": "",
-    "description": "",
-    "tags": [
-      "",
-      "",
-      ""
-    ]
-  },
-  {
-    "id": "",
-    "title": "",
-    "author": "",
-    "genre": "",
-    "price": ,
-    "cover": "",
-    "description": "",
-    "tags": [
-      "",
-      "",
-      ""
-    ]
-  },
-  {
-    "id": "",
-    "title": "",
-    "author": "",
-    "genre": "",
-    "price": ,
-    "cover": "",
-    "description": "",
-    "tags": [
-      "",
-      "",
-      ""
-    ]
-  },
-  {
-    "id": "",
-    "title": "",
-    "author": "",
-    "genre": "",
-    "price": ,
-    "cover": "",
-    "description": "",
-    "tags": [
-      "",
-      "",
-      ""
-    ]
-  },
-  {
-    "id": "",
-    "title": "",
-    "author": "",
-    "genre": "",
-    "price": ,
-    "cover": "",
-    "description": "",
-    "tags": [
-      "",
-      "",
-      ""
-    ]
   }
 ]
-/*
-  {
-    "id": "",
-    "title": "",
-    "author": "",
-    "genre": "",
-    "price": ,
-    "cover": "",
-    "description": "",
-    "tags": [
-      "",
-      "",
-      ""
-    ]
-  }, */
+//   {
+//     "id": "",
+//     "title": "",
+//     "author": "",
+//     "genre": "",
+//     "price": ,
+//     "cover": "",
+//     "description": "",
+//     "tags": [
+//       "",
+//       "",
+//       ""
+//     ]
+//   },
