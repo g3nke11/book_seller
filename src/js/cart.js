@@ -43,10 +43,23 @@ function loadBooksFromLocalStorage() {
 }
 
 // Call this function when your page loads to display the books
-document.addEventListener("DOMContentLoaded", loadBooksFromLocalStorage);
-
-// You'll also need to ensure that when you save books to localStorage, you're doing it correctly.
-// For example, when adding or updating books:
-function saveBooksToLocalStorage(books) {
-  localStorage.setItem("books", JSON.stringify(books));
+document.addEventListener("DOMContentLoaded", () => {
+    loadBooksFromLocalStorage();
+    document.getElementById("search").addEventListener("input", e => {
+        filterBooks(e.target.value);
+      });
+    
+      const searchInput = document.querySelector('.search-bar input[type="text"]');
+        if (searchInput) {
+            // Listen for the 'Enter' key press in the search input field.
+            searchInput.addEventListener('keypress', (event) => {
+                if (event.key === 'Enter') {
+                    handleSearch();
+                }
+            });
+            // If you have a dedicated search button, you would add an event listener to it here.
+            // Example: const searchButton = document.querySelector('.search-bar button');
+            // if (searchButton) { searchButton.addEventListener('click', handleSearch); }
+        }
 }
+);
