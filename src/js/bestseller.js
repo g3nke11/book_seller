@@ -45,7 +45,8 @@ const bookList = document.getElementById('book-list');
 const searchInput = document.getElementById('search');
 
 async function fetchBooks (query = 'bestseller') {
-  const url = `https://openLibrary.org/search.json?q=${encodeURIComponent(query)}&limit=10`;
+  // const url = `https://openLibrary.org/search.json?q=${encodeURIComponent(query)}&limit=10`;
+  const url = 'books.json';
 
   try{
     const response = await fetch(url);
