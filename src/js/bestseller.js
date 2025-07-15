@@ -132,7 +132,7 @@ function sortBooks(order) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  displayBooks(books);
+  // displayBooks(books);
 
   document.getElementById("search").addEventListener("input", e => {
     filterBooks(e.target.value);
