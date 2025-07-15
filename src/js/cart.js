@@ -1,5 +1,5 @@
 function displayBooks(data) {
-  const list = document.getElementById("book-list");
+  const list = document.getElementById("cart-content");
   list.innerHTML = ""; // Clear existing content
 
   if (!data || data.length === 0) {
