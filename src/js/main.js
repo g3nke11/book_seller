@@ -18,7 +18,7 @@ async function homebooks() {
         const allBooks = await response.json();
 
         // Define the genres you want to display on the home page.
-        const genres = ["Fiction", "Non-Fiction", "Young Adult"];
+        const genres = ["Fiction", "Non-Fiction", "Young Adult", "Self-help", "Science Fiction", "Biography", "Children's"];
 
         // Iterate over each genre to filter and display books.
         genres.forEach(genre => {
