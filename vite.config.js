@@ -16,7 +16,8 @@ export default defineConfig({
         genre_page: resolve(__dirname, "src/shop-by-genre.html"),
         base: resolve(__dirname, "src/base.html"),
         bestsellter: resolve(__dirname, "src/bestseller.html"),
-        about_us: resolve(__dirname, "src/about-us.html")
+        about_us: resolve(__dirname, "src/about-us.html"),
+        cart: resolve(__dirname, "src/cart.html")
       }
     }
   }
