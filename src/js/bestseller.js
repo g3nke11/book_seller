@@ -52,7 +52,7 @@ async function fetchBooks (query = 'bestseller') {
     const response = await fetch(url);
     const data = await response.json();
   
-    displayBooks(data.docs);
+    displayBooks(data);
   } catch (error) {
     console.error('Error fetching books:', error);
     bookList.innerHTML = '<p>Failed to load books. Please try again later.</p>';
