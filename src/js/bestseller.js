@@ -58,23 +58,23 @@ async function fetchBooks (query = 'bestseller') {
   }
 }
 
-function displayBooks(books) {
-  bookList.innerHTML = books.map(book => {
-    const title = book.title || 'No Title';
-    const author = book.author_name ? book.author_name.join(', ') : 'Unknown Author';
-    const coverId = book.cover_id;
-    const coverUrl = coverId
-    ? `https://covers.openlibrary.org/b/id/${coverId}-M.jpg`
-    : 'https://via.placeholder.com/128x193?text=No+Cover';
+// function displayBooks(books) {
+//   bookList.innerHTML = books.map(book => {
+//     const title = book.title || 'No Title';
+//     const author = book.author_name ? book.author_name.join(', ') : 'Unknown Author';
+//     const coverId = book.cover_id;
+//     const coverUrl = coverId
+//     ? `https://covers.openlibrary.org/b/id/${coverId}-M.jpg`
+//     : 'https://via.placeholder.com/128x193?text=No+Cover';
 
-    return `
-    <div class="book">
-      <img src="${coverUrl}" alt="${title}">
-      <h3>${title}</h3>
-      <p>by ${author}</p>
-    </div>`;
-  }).join('');
-}
+//     return `
+//     <div class="book">
+//       <img src="${coverUrl}" alt="${title}">
+//       <h3>${title}</h3>
+//       <p>by ${author}</p>
+//     </div>`;
+//   }).join('');
+// }
 
 searchInput.addEventListener('input', () =>{
   const query = searchInput.value.trim();
