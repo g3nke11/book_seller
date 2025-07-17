@@ -26,3 +26,18 @@ nav ul li a {
 .search-bar {
     margin-left: auto;
 }
+
+@media (max-width: 500px) {
+    .dropdown{
+        display: block;
+        position: static;
+        padding-left: 10px;
+    }
+
+    .dropdown-content li a {
+        display: block;
+        padding: 8px 0;
+    }
+
+    
+}
