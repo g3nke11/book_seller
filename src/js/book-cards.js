@@ -90,7 +90,7 @@ function displaySingleBook(bookId, allBooks, container) {
     // If the book is found, render its details.
     if (book) {
         container.innerHTML = `
-                <img src="${imageUrl}" class="book-cover" alt="${book.title}">
+                <img src="${book.cover}" class="book-cover" alt="${book.title}">
                 <div class="book-info">
                     <h2>${book.title}</h2>
                     <p><strong>Author:</strong> ${book.author}</p>
