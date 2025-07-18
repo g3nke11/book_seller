@@ -1,3 +1,5 @@
+import { handleSearch } from "./search.js"
+
 function displayBooks(data) {
   const list = document.getElementById("cart-content");
   list.innerHTML = ""; // Clear existing content
