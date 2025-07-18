@@ -90,19 +90,15 @@ function displaySingleBook(bookId, allBooks, container) {
     // If the book is found, render its details.
     if (book) {
         container.innerHTML = `
-            <div class="book-detail-card">
-                <img src="${book.cover || book.image}" alt="${book.title}" class="book-detail-cover">
+                <img src="${imageUrl}" class="book-cover" alt="${book.title}">
                 <div class="book-info">
-                    <h1>${book.title}</h1>
+                    <h2>${book.title}</h2>
                     <p><strong>Author:</strong> ${book.author}</p>
                     <p><strong>Genre:</strong> ${book.genre}</p>
-                    <p>${book.description}</p>
                     <p><strong>Price:</strong> $${book.price ? book.price.toFixed(2) : 'N/A'}</p>
                     <button class="add-to-cart-btn" data-book-title="${book.title}" data-book-id="${book.id}">Add to Cart</button>
-                    <p><a href="index.html">Back to Home</a></p>
                 </div>
-            </div>
-        `;
+            `;
         // Attach event listener to the "Add to Cart" button after it's rendered.
         const addToCartButton = container.querySelector('.add-to-cart-btn');
         if (addToCartButton) {

@@ -86,7 +86,14 @@ function displayCart() {
         const itemElement = document.createElement('div');
         itemElement.classList.add('cart-item'); // Add a class for styling
         itemElement.innerHTML = `
-            <span>${item.title}</span>
+                <img src="${imageUrl}" class="book-cover" alt="${book.title}">
+                <div class="book-info">
+                    <h2>${book.title}</h2>
+                    <p><strong>Author:</strong> ${book.author}</p>
+                    <p><strong>Genre:</strong> ${book.genre}</p>
+                    <p><strong>Price:</strong> $${book.price ? book.price.toFixed(2) : 'N/A'}</p>
+                    <button class="add-to-cart-btn" data-book-title="${book.title}" data-book-id="${book.id}">Add to Cart</button>
+                </div>
             <span>Quantity: ${item.quantity}</span>
             <button onclick="removeFromCart('${item.id}')">Remove</button>
             <button onclick="increaseQuantity('${item.id}')">+</button>
