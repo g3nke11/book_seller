@@ -29,19 +29,76 @@ function displayBooks(data) {
 }
 
 // Function to load books from localStorage
-function loadBooksFromLocalStorage() {
-  const booksJSON = localStorage.getItem("bookShoppeCart"); // Assuming you store your books under the key "books"
-  if (booksJSON) {
+// function loadBooksFromLocalStorage() {
+//   const booksJSON = localStorage.getItem("bookShoppeCart"); // Assuming you store your books under the key "books"
+//   if (booksJSON) {
+//     try {
+//       const books = JSON.parse(booksJSON);
+//       displayBooks(books);
+//     } catch (e) {
+//       console.error("Error parsing books from localStorage:", e);
+//       displayBooks([]); // Display an empty state if parsing fails
+//     }
+//   } else {
+//     displayBooks([]); // Display an empty state if no books are found in localStorage
+//   }
+// }
+
+function getCartFromLocalStorage() {
     try {
-      const books = JSON.parse(booksJSON);
-      displayBooks(books);
-    } catch (e) {
-      console.error("Error parsing books from localStorage:", e);
-      displayBooks([]); // Display an empty state if parsing fails
+        // Attempt to retrieve the cart string from localStorage
+        const cartString = localStorage.getItem('bookShoppeCart');
+
+        // If a cart string exists, parse it back into a JavaScript array/object
+        if (cartString) {
+            return JSON.parse(cartString);
+        } else {
+            // If no cart string is found, return an empty array to signify an empty cart
+            return [];
+        }
+    } catch (error) {
+        // Handle potential errors, e.g., malformed JSON in localStorage
+        console.error("Error retrieving or parsing cart from localStorage:", error);
+        // In case of an error, it's safer to return an empty array
+        return [];
     }
-  } else {
-    displayBooks([]); // Display an empty state if no books are found in localStorage
-  }
+}
+
+function displayCart() {
+    const cart = getCartFromLocalStorage(); // Pull the cart data
+
+    const cartItemsContainer = document.getElementById('cart-items'); // Assuming you have a div/ul for cart items
+    if (!cartItemsContainer) {
+        console.error("Cart items container not found!");
+        return;
+    }
+
+    cartItemsContainer.innerHTML = ''; // Clear previous items
+
+    if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+        console.log("Cart is empty.");
+        return;
+    }
+
+    let totalItems = 0;
+    cart.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.classList.add('cart-item'); // Add a class for styling
+        itemElement.innerHTML = `
+            <span>${item.title}</span>
+            <span>Quantity: ${item.quantity}</span>
+            <button onclick="removeFromCart('${item.id}')">Remove</button>
+            <button onclick="increaseQuantity('${item.id}')">+</button>
+            <button onclick="decreaseQuantity('${item.id}')">-</button>
+        `;
+        cartItemsContainer.appendChild(itemElement);
+        totalItems += item.quantity;
+    });
+
+    // You might also want to display total items or total price
+    document.getElementById('total-items-in-cart').textContent = `Total Items: ${totalItems}`; // Assuming an element for this
+    console.log("Displaying cart:", cart);
 }
 
 function filterBooks(keyword) {
@@ -63,6 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-  loadBooksFromLocalStorage();
+  // loadBooksFromLocalStorage();
+  displayCart();
 }
 );
