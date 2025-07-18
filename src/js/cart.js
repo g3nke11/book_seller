@@ -79,6 +79,7 @@ function displayCart() {
 
             // Populate the item's content with full details from `fullBookDetails`
             itemElement.innerHTML = `
+              <div class='book-card'>
                 <img src="${imageUrl}" class="book-cover" alt="${fullBookDetails.title}">
                 <div class="book-info">
                     <h2>${fullBookDetails.title}</h2>
@@ -94,6 +95,7 @@ function displayCart() {
                     </div>
                     <button class="remove-btn" onclick="removeFromCart('${cartItem.id}')" aria-label="Remove ${fullBookDetails.title} from cart">Remove</button>
                 </div>
+              </div>
             `;
             fragment.appendChild(itemElement);
 
