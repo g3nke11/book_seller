@@ -211,7 +211,98 @@ function showMessageBox(message) {
     }, 3000);
 }
 
+// --- NEW FUNCTIONS FOR EMAIL ---
+
+/**
+ * Validates an email address format using a simple regex.
+ * @param {string} email The email string to validate.
+ * @returns {boolean} True if the email is valid, false otherwise.
+ */
+function isValidEmail(email) {
+    // A common regex for email validation. Not exhaustive, but good enough for basic check.
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+/**
+ * Generates the email body content from the current cart.
+ * @returns {string} The formatted text for the email body.
+ */
+function generateEmailBody() {
+    const cart = getCartFromLocalStorage();
+    let emailBody = "Dear Customer,\n\n";
+    emailBody += "Thank you for your interest in Book Shoppe! Here is a summary of your cart:\n\n";
+
+    if (cart.length === 0) {
+        emailBody += "Your cart is currently empty.\n\n";
+    } else {
+        cart.forEach((cartItem, index) => {
+            const fullBookDetails = allBooksData.find(book => book.id.toString() === cartItem.id);
+            if (fullBookDetails) {
+                emailBody += `${index + 1}. Title: ${fullBookDetails.title}\n`;
+                emailBody += `   Author: ${fullBookDetails.author || 'N/A'}\n`;
+                emailBody += `   Price: $${fullBookDetails.price ? fullBookDetails.price.toFixed(2) : 'N/A'}\n`;
+                emailBody += `   Quantity: ${cartItem.quantity}\n`;
+                emailBody += `   Subtotal: $${(fullBookDetails.price * cartItem.quantity).toFixed(2)}\n\n`;
+            } else {
+                emailBody += `${index + 1}. Item ID: ${cartItem.id}\n`;
+                emailBody += `   Title: ${cartItem.title} (Details unavailable)\n`;
+                emailBody += `   Quantity: ${cartItem.quantity}\n\n`;
+            }
+        });
+
+        // Get total price from the display function's logic
+        const totalPriceElement = document.getElementById('cart-total-price');
+        const totalPrice = totalPriceElement ? totalPriceElement.textContent.replace('$', '') : '0.00';
+
+        emailBody += `--------------------------------------\n`;
+        emailBody += `Total Items: ${document.getElementById('cart-total-count').textContent}\n`;
+        emailBody += `Total Cart Price: $${totalPrice}\n\n`;
+    }
+
+    emailBody += "Thank you for shopping with us!\n";
+    emailBody += "Book Shoppe Team";
+
+    // Encode the body for use in a mailto link
+    return encodeURIComponent(emailBody);
+}
+
+
+/**
+ * Handles the click event for the "Send Cart to Email" button.
+ * Validates email and constructs a mailto link.
+ */
+function sendCartToEmail() {
+    const customerEmailInput = document.getElementById('customer-email');
+    const emailError = document.getElementById('email-error');
+    const customerEmail = customerEmailInput.value.trim();
+
+    if (!isValidEmail(customerEmail)) {
+        emailError.style.display = 'block'; // Show error message
+        showMessageBox("Please enter a valid email address.");
+        return;
+    } else {
+        emailError.style.display = 'none'; // Hide error message if valid
+    }
+
+    const emailSubject = encodeURIComponent("Your Book Shoppe Cart Summary");
+    const emailBody = generateEmailBody();
+
+    // Construct the mailto link
+    const mailtoLink = `mailto:${customerEmail}?subject=${emailSubject}&body=${emailBody}`;
+
+    // Open the user's default email client
+    window.location.href = mailtoLink;
+
+    showMessageBox("Opening your email client with cart details.");
+    // Optionally clear the email input after sending
+    // customerEmailInput.value = '';
+}
+
+
+// --- Initialization ---
 document.addEventListener("DOMContentLoaded", async () => {
+    // Initialize search bar functionality if present
     const searchInput = document.querySelector('.search-bar input[type="text"]');
     if (searchInput) {
         searchInput.addEventListener('keypress', (event) => {
@@ -221,6 +312,29 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
+    // Load all book data first
     await loadAllBooksData();
+
+    // Then display the cart, using the loaded book data
     displayCart();
+
+    // Attach event listener to the "Send Cart to Email" button
+    const emailCartButton = document.getElementById('email-cart-btn');
+    if (emailCartButton) {
+        emailCartButton.addEventListener('click', sendCartToEmail);
+    }
 });
+
+// document.addEventListener("DOMContentLoaded", async () => {
+//     const searchInput = document.querySelector('.search-bar input[type="text"]');
+//     if (searchInput) {
+//         searchInput.addEventListener('keypress', (event) => {
+//             if (event.key === 'Enter') {
+//                 handleSearch();
+//             }
+//         });
+//     }
+
+//     await loadAllBooksData();
+//     displayCart();
+// });
