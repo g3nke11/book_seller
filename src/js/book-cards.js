@@ -105,7 +105,8 @@ function displaySingleBook(bookId, allBooks, container) {
             addToCartButton.addEventListener('click', (event) => {
                 const title = event.target.dataset.bookTitle;
                 const id = event.target.dataset.bookId;
-                addToCart(title, id);
+                const author = event.target.dataset.bookAuthor;
+                addToCart(title, id, author);
             });
         }
     } else {
@@ -205,7 +206,7 @@ function displaySearchResults(query, allBooks, container) {
  * @param {string} bookTitle - The title of the book to add.
  * @param {string} bookId - The ID of the book to add.
  */
-function addToCart(bookTitle, bookId) {
+function addToCart(bookTitle, bookId, bookAuthor) {
     // Retrieve the current cart from localStorage.
     // If no cart exists, initialize it as an empty array.
     let cart = JSON.parse(localStorage.getItem('bookShoppeCart')) || [];
@@ -219,7 +220,7 @@ function addToCart(bookTitle, bookId) {
         showMessageBox(`"${bookTitle}" quantity updated in cart!`);
     } else {
         // If it's a new item, add it with a quantity of 1.
-        cart.push({ id: bookId, title: bookTitle, quantity: 1 });
+        cart.push({ id: bookId, title: bookTitle, author: bookAuthor, quantity: 1 });
         showMessageBox(`"${bookTitle}" added to cart!`);
     }
 
