@@ -86,8 +86,7 @@ function displayCart() {
                     <p><strong>Author:</strong> ${fullBookDetails.author || 'N/A'}</p>
                     <p><strong>Genre:</strong> ${fullBookDetails.genre || 'N/A'}</p>
                     <p><strong>Price:</strong> $${fullBookDetails.price ? fullBookDetails.price.toFixed(2) : 'N/A'}</p>
-                </div>
-                <div class="cart-item-controls">
+                
                     <span>Quantity: ${cartItem.quantity}</span>
                     <div class="quantity-buttons">
                         <button onclick="decreaseQuantity('${cartItem.id}')" aria-label="Decrease quantity of ${fullBookDetails.title}">-</button>
