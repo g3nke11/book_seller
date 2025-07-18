@@ -205,6 +205,7 @@ function displaySearchResults(query, allBooks, container) {
  * Adds a book title to the shopping cart stored in localStorage.
  * @param {string} bookTitle - The title of the book to add.
  * @param {string} bookId - The ID of the book to add.
+ * @param {string} bookAuthor
  */
 function addToCart(bookTitle, bookId, bookAuthor) {
     // Retrieve the current cart from localStorage.
