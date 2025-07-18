@@ -89,8 +89,8 @@ function displayCart() {
                 <img src="{imageUrl}" class="book-cover" alt="${item.title}">
                 <div class="book-info">
                     <h2>${item.title}</h2>
-                    <p><strong>Author:</strong> ${item.author}</p>
-                    <p><strong>Price:</strong> ${book.price ? book.price.toFixed(2) : 'N/A'}</p>
+                    <p><strong>Author:</strong> {item.author}</p>
+                    <p><strong>Price:</strong> {book.price ? book.price.toFixed(2) : 'N/A'}</p>
                 </div>
             <span>Quantity: ${item.quantity}</span>
             <button onclick="removeFromCart('${item.id}')">Remove</button>
