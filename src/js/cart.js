@@ -1,12 +1,7 @@
-import { handleSearch } from "./search.js"; // Assuming this is still needed for your search bar
+import { handleSearch } from "./search.js";
 
-// Declare a variable to hold all book data, making it accessible globally within this module
 let allBooksData = [];
 
-/**
- * Fetches the books.json data and stores it.
- * This should be called once when the page loads.
- */
 async function loadAllBooksData() {
     try {
         const response = await fetch("books.json");
@@ -17,7 +12,6 @@ async function loadAllBooksData() {
         console.log("Books data loaded:", allBooksData);
     } catch (error) {
         console.error("Error fetching all books data:", error);
-        // Handle gracefully, maybe disable cart display or show an error message
         const cartItemsContainer = document.getElementById('cart-content');
         if (cartItemsContainer) {
             cartItemsContainer.innerHTML = '<p>Could not load book details. Please try again later.</p>';
@@ -25,10 +19,6 @@ async function loadAllBooksData() {
     }
 }
 
-/**
- * Retrieves the shopping cart from localStorage.
- * @returns {Array} An array of cart items, or an empty array if no cart is found or an error occurs.
- */
 function getCartFromLocalStorage() {
     try {
         const cartString = localStorage.getItem('bookShoppeCart');
@@ -39,100 +29,113 @@ function getCartFromLocalStorage() {
     }
 }
 
-/**
- * Displays the current shopping cart in the specified HTML container,
- * fetching full book details from the loaded 'allBooksData'.
- */
 function displayCart() {
-    const cart = getCartFromLocalStorage(); // Get the cart data from localStorage
-
+    const cart = getCartFromLocalStorage();
     const cartItemsContainer = document.getElementById('cart-content');
+
     if (!cartItemsContainer) {
         console.error("Error: '#cart-content' element not found in the DOM.");
         return;
     }
 
-    cartItemsContainer.innerHTML = ''; // Clear any existing content
+    cartItemsContainer.innerHTML = ''; // Clear existing content
 
     if (cart.length === 0) {
         cartItemsContainer.innerHTML = '<p>Your shopping cart is currently empty.</p>';
         updateCartTotalDisplay(0);
+        updateCartTotalPriceDisplay(0); // Also update total price to 0
         return;
     }
 
     let totalItemsInCart = 0;
-    let totalPrice = 0; // To calculate total price
+    let totalPrice = 0;
 
-    // Create a DocumentFragment for efficient DOM manipulation
     const fragment = document.createDocumentFragment();
 
     cart.forEach(cartItem => {
-        // Find the full book details using the ID from the cart item
         const fullBookDetails = allBooksData.find(book => book.id.toString() === cartItem.id);
 
-        if (fullBookDetails) {
-            const itemElement = document.createElement('div');
-            itemElement.classList.add('cart-item'); // Add a class for CSS styling
+        const itemElement = document.createElement('div');
+        itemElement.classList.add('cart-item');
 
-            // Fallback for image URL if 'cover' is not present
+        if (fullBookDetails) {
             const imageUrl = fullBookDetails.cover || fullBookDetails.image || 'https://placehold.co/150x200/cccccc/333333?text=No+Image';
 
-            // Populate the item's content with full details from `fullBookDetails`
             itemElement.innerHTML = `
-              <div class='book-card'>
-                <img src="${imageUrl}" class="book-cover" alt="${fullBookDetails.title}">
-                <div class="book-info">
-                    <h2>${fullBookDetails.title}</h2>
-                    <p><strong>Author:</strong> ${fullBookDetails.author || 'N/A'}</p>
-                    <p><strong>Genre:</strong> ${fullBookDetails.genre || 'N/A'}</p>
-                    <p><strong>Price:</strong> $${fullBookDetails.price ? fullBookDetails.price.toFixed(2) : 'N/A'}</p>
-                
-                    <span>Quantity: ${cartItem.quantity}</span>
-                    <div class="quantity-buttons">
-                        <button onclick="decreaseQuantity('${cartItem.id}')" aria-label="Decrease quantity of ${fullBookDetails.title}">-</button>
-                        <button onclick="increaseQuantity('${cartItem.id}')" aria-label="Increase quantity of ${fullBookDetails.title}">+</button>
+                <div class='book-card'>
+                    <img src="${imageUrl}" class="book-cover" alt="${fullBookDetails.title}">
+                    <div class="book-info">
+                        <h2>${fullBookDetails.title}</h2>
+                        <p><strong>Author:</strong> ${fullBookDetails.author || 'N/A'}</p>
+                        <p><strong>Genre:</strong> ${fullBookDetails.genre || 'N/A'}</p>
+                        <p><strong>Price:</strong> $${fullBookDetails.price ? fullBookDetails.price.toFixed(2) : 'N/A'}</p>
+                        <span>Quantity: ${cartItem.quantity}</span>
+                        <div class="quantity-buttons">
+                            <button class="decrease-btn" data-book-id="${cartItem.id}" aria-label="Decrease quantity of ${fullBookDetails.title}">-</button>
+                            <button class="increase-btn" data-book-id="${cartItem.id}" aria-label="Increase quantity of ${fullBookDetails.title}">+</button>
+                        </div>
+                        <button class="remove-btn" data-book-id="${cartItem.id}" aria-label="Remove ${fullBookDetails.title} from cart">Remove</button>
                     </div>
-                    <button class="remove-btn" onclick="removeFromCart('${cartItem.id}')" aria-label="Remove ${fullBookDetails.title} from cart">Remove</button>
                 </div>
-              </div>
             `;
-            fragment.appendChild(itemElement);
-
             totalItemsInCart += cartItem.quantity;
             if (fullBookDetails.price) {
                 totalPrice += fullBookDetails.price * cartItem.quantity;
             }
-
         } else {
-            // Handle case where book details are not found (e.g., book removed from JSON, or ID mismatch)
             console.warn(`Book with ID ${cartItem.id} not found in allBooksData. Displaying limited info.`);
-            const itemElement = document.createElement('div');
-            itemElement.classList.add('cart-item', 'missing-book');
+            itemElement.classList.add('missing-book');
             itemElement.innerHTML = `
                 <p><strong>Item ID: ${cartItem.id}</strong></p>
                 <p>${cartItem.title} (Quantity: ${cartItem.quantity})</p>
                 <p><em>Details unavailable.</em></p>
-                <button class="remove-btn" onclick="removeFromCart('${cartItem.id}')">Remove Missing Item</button>
+                <button class="remove-btn" data-book-id="${cartItem.id}">Remove Missing Item</button>
             `;
-            fragment.appendChild(itemElement);
-            totalItemsInCart += cartItem.quantity; // Still count towards total items
+            totalItemsInCart += cartItem.quantity;
         }
+        fragment.appendChild(itemElement);
     });
 
-    cartItemsContainer.appendChild(fragment); // Append all items at once
+    cartItemsContainer.appendChild(fragment);
+
+    // --- IMPORTANT: Attach Event Listeners AFTER elements are in the DOM ---
+
+    // Attach listeners for increase quantity buttons
+    cartItemsContainer.querySelectorAll('.increase-btn').forEach(button => {
+        button.addEventListener('click', (event) => {
+            const bookId = event.target.dataset.bookId;
+            increaseQuantity(bookId);
+        });
+    });
+
+    // Attach listeners for decrease quantity buttons
+    cartItemsContainer.querySelectorAll('.decrease-btn').forEach(button => {
+        button.addEventListener('click', (event) => {
+            const bookId = event.target.dataset.bookId;
+            decreaseQuantity(bookId);
+        });
+    });
+
+    // Attach listeners for remove buttons
+    cartItemsContainer.querySelectorAll('.remove-btn').forEach(button => {
+        button.addEventListener('click', (event) => {
+            const bookId = event.target.dataset.bookId;
+            removeFromCart(bookId);
+        });
+    });
 
     updateCartTotalDisplay(totalItemsInCart);
-    updateCartTotalPriceDisplay(totalPrice); // New function to display total price
+    updateCartTotalPriceDisplay(totalPrice);
     console.log("Shopping cart displayed:", cart);
 }
 
-// --- Placeholder Functions for Cart Actions (Implement these fully) ---
+// --- Cart Action Functions (remain largely the same, but now called via event listeners) ---
 
 function removeFromCart(bookId) {
     let cart = getCartFromLocalStorage();
     cart = cart.filter(item => item.id !== bookId);
     localStorage.setItem('bookShoppeCart', JSON.stringify(cart));
-    displayCart(); // Re-render the cart
+    displayCart();
     showMessageBox(`Item removed from cart!`);
 }
 
@@ -155,7 +158,6 @@ function decreaseQuantity(bookId) {
             cart[itemIndex].quantity--;
             showMessageBox(`Quantity decreased for item!`);
         } else {
-            // If quantity is 1 and we decrease, remove the item
             cart.splice(itemIndex, 1);
             showMessageBox(`Item removed from cart!`);
         }
@@ -164,10 +166,6 @@ function decreaseQuantity(bookId) {
     }
 }
 
-/**
- * Updates a display element for the total number of items in the cart.
- * @param {number} total The total number of items.
- */
 function updateCartTotalDisplay(total) {
     const totalElement = document.getElementById('cart-total-count');
     if (totalElement) {
@@ -175,24 +173,13 @@ function updateCartTotalDisplay(total) {
     }
 }
 
-/**
- * New function: Updates a display element for the total price of items in the cart.
- * @param {number} total The total price.
- */
 function updateCartTotalPriceDisplay(total) {
-    const totalElement = document.getElementById('cart-total-price'); // Assuming an element with this ID
+    const totalElement = document.getElementById('cart-total-price');
     if (totalElement) {
         totalElement.textContent = `$${total.toFixed(2)}`;
     }
 }
 
-
-/**
- * Displays a custom message box instead of alert().
- * This function is copied from your other file for convenience in cart.js.
- * Ideally, this would be in a shared utility file.
- * @param {string} message - The message to display.
- */
 function showMessageBox(message) {
     let messageBox = document.getElementById('custom-message-box');
     if (!messageBox) {
@@ -202,7 +189,7 @@ function showMessageBox(message) {
             position: fixed;
             top: 20px;
             right: 20px;
-            background-color: #4CAF50; /* Green */
+            background-color: #4CAF50;
             color: white;
             padding: 15px;
             border-radius: 5px;
@@ -224,11 +211,7 @@ function showMessageBox(message) {
     }, 3000);
 }
 
-
-// --- Initialization ---
-// Make sure to call loadAllBooksData BEFORE displayCart
 document.addEventListener("DOMContentLoaded", async () => {
-    // If you have a search bar on your cart page, keep this:
     const searchInput = document.querySelector('.search-bar input[type="text"]');
     if (searchInput) {
         searchInput.addEventListener('keypress', (event) => {
@@ -238,12 +221,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
-    // Load the book data first
     await loadAllBooksData();
-
-    // Then display the cart, using the loaded book data
     displayCart();
 });
-
-// Export functions if other modules need to call them
-// export { displayCart, getCartFromLocalStorage, showMessageBox }; // You might export these
