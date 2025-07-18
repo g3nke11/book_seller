@@ -67,7 +67,7 @@ function getCartFromLocalStorage() {
 function displayCart() {
     const cart = getCartFromLocalStorage(); // Pull the cart data
 
-    const cartItemsContainer = document.getElementById('cart-items'); // Assuming you have a div/ul for cart items
+    const cartItemsContainer = document.getElementById('cart-content'); // Assuming you have a div/ul for cart items
     if (!cartItemsContainer) {
         console.error("Cart items container not found!");
         return;
