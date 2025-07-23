@@ -13,7 +13,7 @@
 
 /* --- Individual Cart Item Styling (from previous steps, ensuring consistency) --- */
 /* This part assumes you already have .book-card styling, but specifically for cart items */
-#cart-content .cart-item {
+.cart-item {
     display: flex;
     flex-wrap: wrap; /* Allows items to wrap on smaller screens */
     align-items: center;
