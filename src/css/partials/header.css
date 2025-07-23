@@ -43,7 +43,7 @@ nav ul li a {
         flex-direction: column;
         background-color: #fff;
         position: absolute;
-        top: 60px;
+        top: 100px;
         left: 0;
         width: 100%;
     }
