@@ -40,6 +40,6 @@
   max-width: 800px;
 }
 
-.search-results-grid {
-  align-items: center;
+div > .search-results-grid {
+  justify-content: center;
 }
