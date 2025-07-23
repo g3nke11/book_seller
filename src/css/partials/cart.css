@@ -1,0 +1,167 @@
+.cart-page-content {
+    display: grid;
+    justify-content: center;
+}
+
+#cart-content {
+    display: grid;
+    justify-content: center;
+}
+
+/* --- Cart Summary Styling --- */
+.cart-summary {
+    background-color: #f8f9fa; /* Light grey background */
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: right; /* Align text to the right */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    max-width: 85%;
+}
+
+.cart-summary p {
+    margin: 0 0 10px 0; /* Space between summary lines */
+    font-size: 1.1em;
+    color: #333;
+}
+
+.cart-summary p:last-child {
+    margin-bottom: 0; /* No margin after the last paragraph */
+    font-weight: bold; /* Make total price stand out */
+    font-size: 1.2em;
+    color: #28a745; /* Green for emphasis */
+}
+
+.cart-summary span {
+    font-weight: bold;
+    color: #000; /* Darker color for the actual numbers */
+}
+
+/* --- Email Cart Section Styling --- */
+.email-cart-section {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center; /* Center content within this section */
+    max-width: 85%;
+}
+
+.email-cart-section h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.email-cart-section p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.email-input-group {
+    margin-bottom: 20px;
+    display: flex; /* Arrange label and input horizontally */
+    flex-direction: column; /* Stack label and input vertically on small screens */
+    align-items: flex-start; /* Align elements to the left */
+    gap: 8px;
+}
+
+.email-input-group label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px; /* Space below label if stacked */
+}
+
+.email-input-group input[type="email"] {
+    width: 100%; /* Full width within its container */
+    max-width: 300px; /* Limit input width */
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.email-input-group input[type="email"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+#email-error {
+    font-size: 0.85em;
+    color: #dc3545; /* Red for error messages */
+    margin-top: 5px;
+    text-align: left; /* Align error message to the left */
+}
+
+#email-cart-btn {
+    background-color: #28a745; /* Green for send button */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    margin-top: 15px; /* Space above button */
+}
+
+#email-cart-btn:hover {
+    background-color: #218838;
+    transform: translateY(-1px); /* Slight lift on hover */
+}
+
+#email-cart-btn:disabled {
+    background-color: #6c757d; /* Grey out when disabled */
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.email-cart-section small {
+    display: block; /* Make small tag a block element for spacing */
+    margin-top: 15px;
+    font-size: 0.8em;
+    color: #777;
+}
+
+/* --- Responsive Adjustments --- */
+@media (min-width: 768px) {
+    .email-input-group {
+        flex-direction: row; /* Label and input side-by-side on larger screens */
+        align-items: center; /* Vertically center them */
+        justify-content: center; /* Center the group itself */
+        gap: 15px; /* More space between label and input */
+    }
+
+    .email-input-group label {
+        margin-bottom: 0; /* No bottom margin when side-by-side */
+    }
+}
+
+@media (max-width: 600px) {
+    .cart-page-content {
+        padding: 0 15px;
+    }
+
+    #cart-content .cart-item {
+        flex-direction: column; /* Stack elements vertically on very small screens */
+        align-items: flex-start; /* Align to the left */
+        text-align: left;
+    }
+
+    #cart-content .cart-item .book-cover {
+        margin-bottom: 10px; /* Space below image */
+    }
+
+    .cart-item-controls {
+        width: 100%; /* Take full width */
+        align-items: flex-start; /* Align buttons to the left */
+        margin-left: 0;
+        margin-top: 10px; /* Space above controls */
+    }
+}
