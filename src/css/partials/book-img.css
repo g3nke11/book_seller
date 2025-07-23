@@ -38,6 +38,7 @@
   overflow: hidden;
   position: relative;
   max-width: 800px;
+  width: 90%;
 }
 
 .search-results-grid {
