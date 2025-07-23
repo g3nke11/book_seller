@@ -41,6 +41,6 @@
 }
 
 .search-results-grid {
+  display: flex;
   justify-content: center;
-  margin: auto;
 }
