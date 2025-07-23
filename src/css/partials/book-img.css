@@ -31,7 +31,6 @@
   align-items: flex-start;
   background-color: #fff;
   border: 1px solid black;
-  justify-content: center;
   box-shadow: 0 5px 6px rgba(0,0,0,0.1);
   padding: 12px;
   margin: 20px;
@@ -42,6 +41,11 @@
 }
 
 .search-results-grid {
+  display: grid;
+  justify-content: center;
+}
+
+.content {
   display: grid;
   justify-content: center;
 }
