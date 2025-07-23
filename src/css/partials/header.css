@@ -32,6 +32,9 @@ nav ul li a {
     font-size: 2rem;
     background: none;
     border: none;
+    color: black;
+    cursor: pointer;
+    margin-left: auto;
 }
 
 @media (max-width: 600px) {
@@ -66,8 +69,9 @@ nav ul li a {
 
     nav ul li a {
         color: black;
-        padding: 10px;
+        padding: 10px 15px;
         display: block;
+        font-size: 1.2rem;
     }
 
 }
