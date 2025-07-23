@@ -40,6 +40,7 @@
   max-width: 800px;
 }
 
-div > .search-results-grid {
+.search-results-grid {
   justify-content: center;
+  margin: auto;
 }
