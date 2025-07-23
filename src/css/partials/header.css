@@ -64,4 +64,10 @@ nav ul li a {
         display: none;
     }
 
+    nav ul li a {
+        color: black;
+        padding: 10px;
+        display: block;
+    }
+
 }
