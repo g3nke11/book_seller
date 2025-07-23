@@ -292,7 +292,7 @@ function sendCartToEmail() {
     const mailtoLink = `mailto:${customerEmail}?subject=${emailSubject}&body=${emailBody}`;
 
     // Open the user's default email client
-    window.location.href = mailtoLink;
+    // window.location.href = mailtoLink;
 
     showMessageBox("Opening your email client with cart details.");
     // Optionally clear the email input after sending
