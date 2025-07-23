@@ -27,17 +27,41 @@ nav ul li a {
     margin-left: auto;
 }
 
-@media (max-width: 500px) {
-    .dropdown{
-        display: block;
-        position: static;
-        padding-left: 10px;
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
     }
 
-    .dropdown-content li a {
-        display: block;
-        padding: 8px 0;
+    nav ul.show {
+        display: flex;
     }
-
     
+    .hamburger {
+        display: block;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    .search-bar {
+        display: none;
+    }
+
 }

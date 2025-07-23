@@ -154,6 +154,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // if (searchButton) { searchButton.addEventListener('click', handleSearch); }
     }
 
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navMenu = document.querySelector('nav ul');
+
+    if(hamburgerBtn && navMenu) {
+        hamburgerBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+        });
+    }
     // Initialize the homebooks function to display books on page load.
     homebooks();
 });
