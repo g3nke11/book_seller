@@ -41,24 +41,7 @@ import { handleSearch } from "./search.js"
 
 
 
-const bookList = document.getElementById('book-list');
-const searchInput = document.getElementById('search');
 
-async function fetchBooks (query = 'bestseller') {
-  // const url = `https://openLibrary.org/search.json?q=${encodeURIComponent(query)}&limit=10`;
-  const url = 'books.json';
-
-  try{
-    const response = await fetch(url);
-    const data = await response.json();
-  
-    displayBooks(data)
-    // displayBooks(data.docs);
-  } catch (error) {
-    console.error('Error fetching books:', error);
-    bookList.innerHTML = '<p>Failed to load books. Please try again later.</p>';
-  }
-}
 
 // function displayBooks(books) {
 //   bookList.innerHTML = books.map(book => {
@@ -85,7 +68,29 @@ searchInput.addEventListener('input', () =>{
 
 fetchBooks();
 
+import { handleSearch } from "./search.js";
+
+let books = [];
 let cart = [];
+
+const bookList = document.getElementById('book-list');
+const searchInput = document.getElementById('search');
+
+async function fetchBooks(query = 'bestseller') {
+  const url = 'books.json';
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    books = data;
+    displayBooks(books);
+  } 
+  catch (error) {
+    console.error('Error fetching books:', error);
+    bookList.innerHTML = '<p>Failed to load books. Please try again later.</p>';
+  }
+}
 
 function displayBooks(data) {
   const list = document.getElementById("book-list");
@@ -106,7 +111,7 @@ function displayBooks(data) {
       </div>
     `;
 
-    list.appendChild(card);
+    bookList.appendChild(card);
   });
 }
 
