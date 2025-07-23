@@ -1,3 +1,8 @@
+.cart-page-content {
+    display: grid;
+    justify-content: center;
+}
+
 #cart-content {
     display: grid;
     justify-content: center;
