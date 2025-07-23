@@ -46,7 +46,7 @@ nav ul li a {
         top: 100px;
         left: 0;
         width: 100%;
-        z-index: 10000;
+        z-index: 9999;
     }
 
     nav ul.show {
@@ -73,6 +73,7 @@ nav ul li a {
         padding: 10px 15px;
         display: block;
         font-size: 1.2rem;
+        z-index: 9999;
     }
 
 }
